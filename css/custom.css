@@ -1,0 +1,30 @@
+#winActions>button{
+    padding: 0 0.1em;
+    margin: 0;
+    border-radius: 100%;
+    border: none;
+    background: none;
+    outline:0;
+}
+
+#winActions>button:hover{
+    cursor: pointer;
+}
+
+#winActions{
+    padding-left: 10px;
+    line-height: 30px;
+}
+
+.window-content{
+    background-color: #2B3C4C!important;
+}
+
+#sidebar{
+    color: #fff;
+    background-color: #232B38;
+}
+
+.nav-group-item.active{
+    background-color: #2C3848!important;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Slexi</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/photon.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Javascript -->
+    <script src="js/menu.js" charset="utf-8"></script>    
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+  </head>
+  <body>
+  
+      <div class="window">
+       <!--.toolbar-header sits at the top of your app -->
+      <header class="toolbar toolbar-header" style="-webkit-app-region: drag">
+        <h1 class="title">Slexi</h1>
+        <div id="winActions" class="btn-group pull-left" style="-webkit-app-region: no-drag">
+          <button onclick="closeApp()" class="icon icon-record" style="font-size:130%;color:#fc605b"></button>
+          <button id="maxiApp" onclick="maxiApp()" class="icon icon-record" style="font-size:130%;color:#fabf43"></button>
+          <button onclick="miniApp()" class="icon icon-record" style="font-size:130%; color:#23ca4c"></button>
+          <button onclick="reloadApp()" class="icon icon-cw" style="font-size:130%; color:#23ca4c"></button>
+        </div>
+      </header>
+
+       <!--Your app's content goes inside .window-content -->
+      <div class="window-content">
+        <div class="pane-group">
+          <div id="sidebar" class="pane pane-sm sidebar">
+            <!--First Nav Group-->
+            <nav class="nav-group">
+              <h3 class="nav-group-title">Favorites</h3>
+              <span class="nav-group-item">
+                <span style="color:#fc605b" class="icon icon-heart"></span>
+                Liked
+              </span>
+              <span class="nav-group-item active">
+                <span style="color:#fabf43" class="icon icon-paper-plane"></span>
+                Share
+              </span>
+              <span class="nav-group-item">
+                <span style="color:#23ca4c" class="icon icon-install"></span>
+                Downloads
+              </span>
+            </nav>
+            <!--Second Nav Group-->
+            <nav class="nav-group">
+              <h3 class="nav-group-title">Favorites</h3>
+              <span class="nav-group-item">
+                <span style="color:#fc605b" class="icon icon-heart"></span>
+                Liked
+              </span>
+              <span class="nav-group-item">
+                <span style="color:#fabf43" class="icon icon-paper-plane"></span>
+                Share
+              </span>
+              <span class="nav-group-item">
+                <span style="color:#23ca4c" class="icon icon-install"></span>
+                Downloads
+              </span>
+            </nav>
+            <!--Third Nav Group-->
+            <nav class="nav-group">
+              <h3 class="nav-group-title">Favorites</h3>
+              <span class="nav-group-item">
+                <span style="color:#fc605b" class="icon icon-heart"></span>
+                Liked
+              </span>
+              <span class="nav-group-item">
+                <span style="color:#fabf43" class="icon icon-paper-plane"></span>
+                Share
+              </span>
+              <span class="nav-group-item">
+                <span style="color:#23ca4c" class="icon icon-install"></span>
+                Downloads
+              </span>
+            </nav>
+          </div>
+
+          <div class="pane">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.js" charset="utf-8"></script> 
+  </body>
+</html>
