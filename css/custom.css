@@ -28,3 +28,113 @@
 .nav-group-item.active{
     background-color: #2C3848!important;
 }
+
+#settingFoot{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    outline: 0;
+    border: 0!important;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+#settingFoot>div>button{
+    padding: 0 0.5em;
+    margin: 0;
+    border-radius: 100%;
+    border: none;
+    background: none;
+    outline:0;
+    font-size: 20px;
+}
+
+
+
+
+
+/*AUTO GENERATED CUSTOM SWITCH*/
+/*.onoffswitch {
+    position: absolute; width: 40px;
+    -webkit-user-select:none;
+    bottom:8%;right: 3%;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 17px; padding: 0; line-height: 30px;
+    border: 2px solid #E3E3E3; border-radius: 17px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 17px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 21px;
+    border: 2px solid #E3E3E3; border-radius: 50%;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(10px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
