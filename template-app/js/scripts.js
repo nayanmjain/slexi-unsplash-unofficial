@@ -32,7 +32,7 @@ const remoteCmd = require('electron').remote;
   var height = window.screen.height;
   var width = window.screen.width;
   var count = 10;
-  var returnedJSON;
+  var response;
   var request =require ('request');
   // request
   //     .get('https://api.unsplash.com/photos/random?client_id='+myAppId +'&count='+count+'&h='+height+'&w='+width)
@@ -43,9 +43,18 @@ const remoteCmd = require('electron').remote;
   //       console.log(returnedJSON);
   //     })
 
+
+
+//Request-Promise Commands and store
+
+  var initiateUri, updateUri, newPageUri;
+  initiateUri='https://api.unsplash.com/photos/random?client_id='+myAppId +'&count='+count+'&h='+height+'&w='+width;
+
+
   var rp = require('request-promise');
+  var error; //-1 cant connect to host
   var options = {
-    uri: 'https://api.unsplash.com/photos/random?client_id='+myAppId +'&count='+count+'&h='+height+'&w='+width,
+    uri: initiateUri,
     qs: {
         client_id: myAppId // -> uri + '?access_token=xxxxx%20xxxxx' 
     },
@@ -56,8 +65,20 @@ rp(options)
     .then(function (repos) {
         console.log('User has %d repos', repos.length);
         console.log(repos);
+        response = repos;
     })
     .catch(function (err) {
         // API call failed... 
+        error = -1;
         console.log('Could not connect to the host')
     });
+
+//Start declaring and prototyping Vue JS
+
+Vue.component('todo-item', {
+  // The todo-item component now accepts a
+  // "prop", which is like a custom attribute.
+  // This prop is called todo.
+  props: ['todo'],
+  template: '<li>kjdhkjfsh</li>'
+})

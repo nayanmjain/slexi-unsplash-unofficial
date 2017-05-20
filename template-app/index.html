@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/photon.css">
     <link rel="stylesheet" href="../css/custom.css">
     <!-- Javascript -->
+    <script src="https://unpkg.com/vue"></script>
     <script src="js/menu.js" charset="utf-8"></script>    
+    <script src="js/scripts.js" charset="utf-8"></script> 
     <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
   </head>
   <body>
@@ -97,11 +99,28 @@
           </div>
 
           <div class="pane">
-            
+              <div id="app">
+                {{ message }}
+              </div>
+            <ol>
+            <!-- Create an instance of the todo-item component -->
+            <todo-item>
+              
+            </todo-item>
+          </ol> 
+
           </div>
         </div>
       </div>
     </div>
-    <script src="js/scripts.js" charset="utf-8"></script> 
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      }
+    })
+</script>
+    
   </body>
 </html>
