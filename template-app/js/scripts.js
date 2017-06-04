@@ -86,13 +86,17 @@ console.log("Calling for response started...");
 setTimeout(function(){
   console.log("Recording response to response.");
   if(response!=undefined){
+      error=1;//Response recieved
+      console.log("Response recieved.");
       for(i=0;i<response.length;i++){
         console.log(response[i]);
         // document.getElementById("app").innerHTML+=response[i].urls.thumb+'<br>';
         document.getElementById("app").innerHTML+="<img src='"+response[i].urls.thumb+"' />"
       }
   }else{
+    error = -1;//Response couldn't be recieved.
     console.log("Response havent been received yet.");
+    document.getElementById("app").innerHTML="<div class='unableToLoad'><h1>ERROR(Reload)</h1></div> ";
   }
   
-}, 1000);
+}, 1000); 
