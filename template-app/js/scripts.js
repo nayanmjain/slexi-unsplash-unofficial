@@ -83,7 +83,7 @@ rp(options)
   // }
 // },2000);
 Vue.component('imageBox', {
-          template: '<div>A custom component!</div>'
+          template: '<div id="immageBoxDiv">'
         });
 console.log("Calling for response started...");
 setTimeout(function(){
@@ -91,8 +91,11 @@ setTimeout(function(){
   if(response!=undefined){
       for(i=0;i<response.length;i++){
         console.log(response[i]);
-        document.getElementById("app").innerHTML+=response[i].urls.thumb+'<br>';
+        // document.getElementById("app").innerHTML+=response[i].urls.thumb+'<br>';
+        document.getElementById("app").innerHTML+="<img src='"+response[i].urls.thumb+"' />"
       }
+  }else{
+    console.log("Response havent been received yet.");
   }
   
 }, 1000);
