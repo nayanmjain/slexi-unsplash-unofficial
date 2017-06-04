@@ -82,9 +82,6 @@ rp(options)
       // console.log(response[2]);
   // }
 // },2000);
-Vue.component('imageBox', {
-          template: '<div id="immageBoxDiv">'
-        });
 console.log("Calling for response started...");
 setTimeout(function(){
   console.log("Recording response to response.");
