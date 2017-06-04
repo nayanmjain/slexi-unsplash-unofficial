@@ -75,10 +75,24 @@ rp(options)
 
 //Start declaring and prototyping Vue JS
 
-Vue.component('todo-item', {
-  // The todo-item component now accepts a
-  // "prop", which is like a custom attribute.
-  // This prop is called todo.
-  props: ['todo'],
-  template: '<li>kjdhkjfsh</li>'
-})
+// setInterval(function(){
+  // if(response===null){
+      // console.log("Hi");
+  // }else{
+      // console.log(response[2]);
+  // }
+// },2000);
+Vue.component('imageBox', {
+          template: '<div>A custom component!</div>'
+        });
+console.log("Calling for response started...");
+setTimeout(function(){
+  console.log("Recording response to response.");
+  if(response!=undefined){
+      for(i=0;i<response.length;i++){
+        console.log(response[i]);
+        document.getElementById("app").innerHTML+=response[i].urls.thumb+'<br>';
+      }
+  }
+  
+}, 1000);
