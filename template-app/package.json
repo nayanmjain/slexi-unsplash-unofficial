@@ -13,5 +13,8 @@
     "request-promise": "^4.2.1",
     "vue": "^2.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "download-file": "^0.1.5",
+    "electron-download-manager": "^1.3.1"
+  }
 }

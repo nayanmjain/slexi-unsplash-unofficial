@@ -1,6 +1,7 @@
 // {app}            Module to control application life.
 // {BrowserWindow}  Module to create native browser window.
 const {app, BrowserWindow} = require('electron')
+
 var path = require('path');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -14,6 +15,7 @@ app.on('window-all-closed', function() {
     app.quit();
   }
 });
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -29,7 +31,6 @@ app.on('ready', function() {
     titleBarStyle: 'hidden',
     frame: false
   })
-
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
@@ -43,5 +44,8 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
 });
+
+
 
