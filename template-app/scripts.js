@@ -93,7 +93,6 @@ setTimeout(function(){
         // document.getElementById("app").innerHTML+=response[i].urls.thumb+'<br>';
         document.getElementById("app").innerHTML+="<div class='card'><img onclick='getSrcOfImage(this.id)' id="+i+" src='"+response[i].urls.thumb+" align='middle'"+"' />"+"<span>by " +response[i].user.first_name+" "+response[i].user.last_name+ "</span></div>"
       }
-      document.getElementById("app").innerHTML+="<button onclick='fetchMoreImages()'>Load More</button>";
   }else{
     error = -1;//Response couldn't be recieved.
     console.log("Response havent been received yet.");
@@ -143,7 +142,7 @@ function fetchMoreImages(){
         response.push.apply(response, repos2);
         for(j=30;j<response.length;j++){
           
-          document.getElementById("app").innerHTML+="<div class='card'><img onclick='getSrcOfImage(this.id)' id='"+j+"' src='"+response[j].urls.thumb+"' align='middle'"+"' />"+"<span>by " +response[j].user.first_name+" "+response[j].user.last_name+ "</span></div>"
+          document.getElementById("app").innerHTML+="<div class='card'><img onclick='getSrcOfImage(this.id)' id="+j+" src='"+response[j].urls.thumb+" align='middle'"+"' />"+"<span>by " +response[j].user.first_name+" "+response[j].user.last_name+ "</span></div>"
         }
         console.log(response);
     }, 2000);    

@@ -193,7 +193,7 @@ input:checked + .slider:before {
                 visibility: hidden;
                 width: 100%;
             }
-            #app button{
+            #loadMore{
                 margin-left: auto;
                 margin-right: auto;
                 position: absolute;
