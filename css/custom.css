@@ -199,8 +199,14 @@ input:checked + .slider:before {
                 position: absolute;
                 /*bottom: 5px;*/
                 left:40%;
-                
+                font-size: 600%;
+                color: white;
+                padding: 10px;
             }
+            #loadMore:hover{
+                cursor: pointer;
+            }
+
             .card:hover span{
                 visibility: visible;
             }
